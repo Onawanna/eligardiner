@@ -1,0 +1,453 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+/* universal box padding */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* setup pages */
+body {
+	background-color: #8AA5A4;
+  line-height: 1.3;
+  font-family: 'Roboto', "Source Sans Pro";
+  margin: 0;
+  padding: 0;
+  color: white;
+  min-height: 100%;
+}
+}
+
+.skip-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skip-links a {
+    position: absolute;
+    top: -3em;
+    background-color: white;
+    color: red;
+    padding: .5em .75em;
+    font-weight: bold;
+}
+
+.skip-links a:focus {
+    top: 0;
+}
+
+/* content setup */
+h1 {
+    display: block;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #282828
+}
+
+a:hover {
+    color: #D66C5B;
+}
+
+.main-content {
+    position: relative;
+    font-family: 'Roboto Condensed';
+}
+
+/*header  and footer setup*/
+header,
+footer {
+  text-align: center;
+  background-color: #455555;
+}
+
+footer p {
+    font-size: 0.75em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #ffffff;
+}
+
+footer a {
+    color: #D66C5B;
+}
+/* nav setup */
+nav ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 15%
+    padding: .5em;
+    border-top: 1px solid #282828;
+    line-height: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #282828;
+    font-size: 1.2em;
+    font-family: 'Roboto Condensed';
+    padding: .5em 1em;
+    font-weight: lighter;
+}
+
+.current-page {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+    text-transform: uppercase;
+}
+
+
+/* sticky hamburger menu from https://codepen.io/joshuajcollinsworth/pen/NqqaXB */
+.reveal {
+	opacity: .85;
+	display: block;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.hamburger-shell {
+	margin: 0;
+	position: fixed;
+	overflow: hidden;
+	width: 70px;
+	height: 100px;
+	overflow: auto;
+	left: calc(100% - 100px);
+	top: 20px;
+}
+
+.top, .middle{
+	position: absolute;
+	width: 62px;
+	height: 10px;
+	background-color: #282828;
+	transition: all 350ms ease-in-out;
+	top: 20px;
+}
+
+.middle {
+	top: 40px;
+}
+
+#menu {
+	position: fixed;
+	left: calc(100% - 292px);
+	top: 10px;
+	color: #282828;
+	display: none;
+	margin: 120px 30px;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #282828;
+	padding: 24px;
+	width: 200px;
+	text-align: right;
+}
+
+#menu a li {
+	text-decoration: none!important;
+	padding-bottom: 10px;
+	margin-bottom: 12px;
+	border-bottom: 1px #282828;
+	list-style: none;
+	color: #282828;
+	transition: all 150ms ease;
+}
+
+#menu a li:hover {
+	color: #D66C5B;
+	padding-right: 3px;
+}
+
+#menu a li:hover:after {
+}
+
+
+
+#menu a {
+	text-decoration: none;
+}
+
+.rotate {
+	transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+	top: 30px;
+	background-color: red;
+	height: 2px;
+}
+
+.rotate-back {
+	transform: rotate(-225deg);
+	-webkit-transform: rotate(-225deg);
+	top: 30px;
+	background-color: red;
+	height: 2px;
+}
+
+.top {
+-webkit-animation-delay: 100ms;
+}
+
+.middle {
+-webkit-animation-delay: 250ms;
+}
+
+.bottom {
+	-webkit-animation-delay: 400ms;
+}
+
+.menu-name {
+	font-family: "Roboto";
+	font-weight: 900;
+	color: #282828;
+	font-size: 19.5px;
+	text-decoration: none;
+	position: absolute;
+	top: 56px;
+	left: -1px;
+	transition: all 350ms;
+}
+
+/*Index Page parallex  */
+
+.parallax {
+	background-image: url('https://i.imgur.com/ar61B2H.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlap {
+  height: 500px;
+  align-items: center;
+  z-index: 0;
+  background-color: red;
+}
+
+
+
+
+/* .parallax {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport.
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow.
+  overflow-x: hidden;
+  /* Enable scrolling on the page.
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent.
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is.
+  height: 100vh;
+
+
+  /* For text formatting.
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: #445454;
+  text-shadow: 4 3 5px #000;
+  font-family: "Roboto";
+  font-size: 20px;
+  margin: 0px 5px;
+}
+
+.parallax::after {
+  /*  sourced from https://alligator.io/css/pure-css-parallax/
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life.
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element.
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements.
+  z-index: -1;
+}
+
+/* The styling for the static div.
+.static1 {
+  background-color: #DDEDEC;
+}
+
+.static2 {
+  background-color: #DDEDEC;
+}
+
+/* Sets the actual background images
+.bg1::after {
+  background-image: url('https://i.imgur.com/ar61B2H.jpg');
+}
+
+.bg2::after {
+  background-image: url('https://i.imgur.com/OwzBqkJ.jpg');
+} */
+
+/* Photos page: gallery of photos */
+.gallery {
+	width: 95%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.gallery img {
+	width: 100%;
+}
+
+.item {
+	border: 4px solid #C2D2F2;
+}
+
+/* Music page: The flip card container done with code from w3schools */
+.flip-card {
+  background-color: #DDEDEB;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #D66B5B;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #445454;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* contact me page:  social icons */
+.icon-container {
+  width: 95%;
+  padding: 24px;
+	margin: 20px;
+	display: grid;
+	grid-template-columns: 25% 25%;
+	grid-column-gap: 20px;
+  align-items: center;
+  align-content: space-around;
+}
+
+.contact-heading {
+  width: 95%;
+  padding: 24px;
+	margin: 20px auto;
+  display: block;
+  align-content: center;
+}
+
+.main-container {
+    display: grid;
+}
+
+i {
+    color: black;
+    vertical-align: middle;
+}
+
+i:hover {
+    color: #D66B5B;
+}
+
+.fa-inverse {
+    color: #ffffff;
+}
+
+
+/* Contact me page: Callout box - fixed position at the bottom of the page */
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+/* Callout header */
+.callout-header {
+  padding: 25px 15px;
+  background: #89A5A3;
+  font-size: 30px;
+  color: ##D66B5B;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding: 15px;
+  background-color: #DDEDEB;
+  color: #282828
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: #DDEDEB;
+}
